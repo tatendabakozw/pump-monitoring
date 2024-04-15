@@ -1,3 +1,4 @@
+import Navbar from "@/components/navigation/Navbar";
 import React, { ReactNode } from "react";
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 const GeneralLayout = ({ children }: Props) => {
   return (
     <div className="flex flex-col w-full">
-      <div className="nav">asdfjlksdf</div>
+      <Navbar />
       {children}
       <div className="footer">footer</div>
     </div>
