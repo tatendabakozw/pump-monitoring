@@ -5,10 +5,12 @@ type Props = {};
 
 function HeroSection({}: Props) {
   return (
-    <div className="herosection min-h-[60vh] bg-red-100 w-full p-4 flex flex-col ">
-      <div className="max-w-7xl w-full mx-auto grid md:grid-cols-2 grid-cols-1 gap-8 h-full flex-1 items-center">
+    <div className="herosection md:min-h-[70vh] min-h-[50vh] bg-red-100 w-full p-4 flex flex-col ">
+      <div className="max-w-7xl w-full mx-auto grid md:grid-cols-2 grid-cols-1 gap-8 h-full flex-1 items-center p-4">
         <div className="col-span-1 flex flex-col space-y-4 flex-1">
-          <p className="text-5xl font-medium">SHOP SMART, SHOP ERICKSONPLAZA</p>
+          <p className="md:text-5xl text-3xl font-medium">
+            SHOP SMART, SHOP ERICKSONPLAZA
+          </p>
           <p className="text-2xl font-medium">
             Buy from your favorite Zim Stores
           </p>
@@ -23,7 +25,7 @@ function HeroSection({}: Props) {
             </button>
           </div>
         </div>
-        <div className="col-span-1 h-full relative flex-1">
+        <div className="md:flex hidden col-span-1 h-full relative flex-1">
           <Image
             src={"/hero1.png"}
             layout="fill"

@@ -1,6 +1,7 @@
 import Navbar from "@/components/navigation/Navbar";
 import React, { ReactNode } from "react";
 import { Inter } from "next/font/google";
+import Footer from "@/components/navigation/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,7 @@ const GeneralLayout = ({ children }: Props) => {
     <div className={`flex flex-col w-full ${inter.className}`}>
       <Navbar />
       {children}
-      <div className="footer">footer</div>
+      <Footer />
     </div>
   );
 };
