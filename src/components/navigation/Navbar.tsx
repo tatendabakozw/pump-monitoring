@@ -7,10 +7,12 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import SideNav from "./SideNav";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const router = useRouter();
   return (
     <div className="w-full bg-white py-2">
       <div className="max-w-7xl w-full mx-auto px-4 text-zinc-700 space-x-4 flex flex-row items-center">
@@ -26,7 +28,10 @@ const Navbar = (props: Props) => {
           <button className="p-2 rounded-full hover:bg-zinc-100">
             <ShoppingBagIcon height={24} width={24} />
           </button>
-          <button className="p-2 rounded-full hover:bg-zinc-100">
+          <button
+            onClick={() => router.push("/auth/login")}
+            className="p-2 rounded-full hover:bg-zinc-100"
+          >
             <UserIcon height={24} width={24} />
           </button>
         </div>
