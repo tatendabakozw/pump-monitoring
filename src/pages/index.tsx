@@ -1,12 +1,12 @@
-import HeroSection from "@/components/page-sections/HeroSection";
-import ShopByCategory from "@/components/page-sections/ShopByCategory";
-import GeneralLayout from "@/layouts/GeneralLayout";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import ShopByCategory from "@/components/page-sections/ShopByCategory";
+import HeroSection from "@/components/page-sections/HeroSection";
+import GeneralLayout from "@/layouts/GeneralLayout";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <GeneralLayout>
+    <GeneralLayout title="Home" description="EricksonPlaza landing area">
       <HeroSection />
       <div className="bg-zinc-50">
         <div className="max-w-7xl py-8 w-full mx-auto overflow-x-hidden">
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      {/* Shop by category section */}
       <ShopByCategory />
     </GeneralLayout>
   );
