@@ -1,55 +1,91 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
-import ShopByCategory from "@/components/page-sections/ShopByCategory";
-import HeroSection from "@/components/page-sections/HeroSection";
-import GeneralLayout from "@/layouts/GeneralLayout";
-import Image from "next/image";
+/* eslint-disable react/no-unescaped-entities */
+import Link from "next/link";
+import { useState } from "react";
+import PrimaryButton from "../components/buttons/PrimaryButton";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import CustomInput from "@/components/inputs/CustomInput";
 
-export default function Home() {
+export function Index() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState("");
+  const router = useRouter();
+
+  const login_user = async () => {
+    setLoading(true);
+    try {
+      console.log("login user");
+      router.push("/overview");
+    } catch (error) {
+      setLoading(false);
+      setErr("login fail");
+    }
+  };
   return (
-    <GeneralLayout title="Home" description="EricksonPlaza landing area">
-      <HeroSection />
-      <div className="bg-zinc-50">
-        <div className="max-w-7xl py-8 w-full mx-auto overflow-x-hidden">
-          <div className="flex flex-row items-center pb-8 justify-between space-x-4">
-            <p className="text-zinc-700 font-semibold md:text-2xl text-lg flex-shrink-0">
-              Featured Categories
-            </p>
-            <div className="flex flex-row items-center justify-between md:space-x-4 space-x-2">
-              <button className="bg-white rounded-full p-2 border border-zinc-300/20 ">
-                <ArrowLeftIcon height={16} width={16} />
-              </button>
-              <button className="bg-white rounded-full p-2 border border-zinc-300/20">
-                <ArrowRightIcon height={16} width={16} />
-              </button>
+    <>
+      <Head>
+        <title>Dashboard - Login</title>
+      </Head>
+      <div className="overflow-hidden relative min-h-screen grid pt-40 w-full px-4">
+        <div className="max-w-sm mx-auto w-full flex flex-col space-y-8">
+          <div className="flex flex-col space-y-2">
+            <div className="flex flex-row self-center">
+              <div className="w-16 h-12 relative rounded-lg">
+                {/* <Image
+                  src={"/images/velocity.svg"}
+                  alt="logo icon"
+                  layout="fill"
+                  objectFit="cover"
+                /> */}
+              </div>
             </div>
+            {/* <BorderedHeading text="Welcome Back" /> */}
+            <p className="text-2xl heading-text text-center font-semibold mb-8">
+              Sign in to dashboard
+            </p>
           </div>
-          <div className="flex flex-row items-center space-x-4">
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-            <CategoryItem />
-          </div>
+          <form onSubmit={login_user} className="flex flex-col space-y-4">
+            <CustomInput
+              heading="Email Address"
+              value={email}
+              setValue={setEmail}
+              placeholder="Enter email address"
+              type="email"
+            />
+            <div className="flex flex-col space-y-2">
+              <CustomInput
+                heading="Password"
+                value={password}
+                setValue={setPassword}
+                placeholder="Password"
+                type="password"
+              />
+              <Link
+                href={"/login"}
+                className="text-xs font-medium  main-link-text text-right"
+              >
+                Forgot password?
+              </Link>
+            </div>
+            <PrimaryButton
+              type="submit"
+              loading={loading}
+              text="Sign in to account"
+              onClick={login_user}
+            />
+          </form>
+          <Link
+            href={"/register"}
+            className="text-xs font-medium main-link-text text-center"
+          >
+            Don't have an account?
+          </Link>
         </div>
       </div>
-      {/* Shop by category section */}
-      <ShopByCategory />
-    </GeneralLayout>
+    </>
   );
 }
 
-const CategoryItem = () => {
-  return (
-    <div className=" bg-white border border-zinc-300/20 p-2 rounded-lg flex flex-col space-y-4">
-      <div className="h-60 w-60 relative">
-        <Image src={"/applieane.png"} alt="category 1 item" layout="fill" />
-      </div>
-      <p className="text-center text-sm font-medium text-zinc-700 capitalize">
-        Kitchen and dining
-      </p>
-    </div>
-  );
-};
+export default Index;
