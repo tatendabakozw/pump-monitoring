@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/ban-types */
-import React from 'react';
-import DashboardLayout from './DashboardLayout';
-import SettingsNavbar from '../components/navigation/SettingsNavbar';
+import React from "react";
+import DashboardLayout from "./DashboardLayout";
+import SettingsNavbar from "../components/navigation/SettingsNavbar";
 
 type Props = { children: any; heading: string };
 

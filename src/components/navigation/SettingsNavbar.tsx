@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/ban-types */
-import { useRouter } from 'next/router';
-import React from 'react';
+import { useRouter } from "next/router";
+import React from "react";
 
 type Props = {};
 
@@ -10,9 +9,9 @@ const SettingsNavbar = (props: Props) => {
   const { pathname } = router;
 
   const settings_options = [
-    { name: 'Projects', _id: 'projects', location: '/settings' },
-    { name: 'Profile', _id: 'profile', location: '/settings/profile' },
-    { name: 'Password', _id: 'password', location: '/settings/password' },
+    { name: "Projects", _id: "projects", location: "/settings" },
+    { name: "Profile", _id: "profile", location: "/settings/profile" },
+    { name: "Password", _id: "password", location: "/settings/password" },
     // {
     //   name: 'Notifications',
     //   _id: 'notifications',
@@ -30,7 +29,7 @@ const SettingsNavbar = (props: Props) => {
             }}
             key={index}
             className={`${
-              pathname === item.location ? 'bg-primary font-semibold ' : ''
+              pathname === item.location ? "bg-primary font-semibold " : ""
             } py-2 outline-none px-4 text-sm rounded main-link-text cursor-pointer `}
           >
             {item.name}

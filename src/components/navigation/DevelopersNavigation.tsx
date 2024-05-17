@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { useRouter } from "next/router";
 
 type Props = {};
@@ -15,7 +14,7 @@ const DevelopersNavigation = (props: Props) => {
     { name: "Apps", _id: "transactions", location: "/transactions" },
   ];
 
-  console.log(pathname)
+  console.log(pathname);
 
   return (
     <div className="flex overflow-scroll no-scrollbar flex-row items-center p-1 rounded-full">

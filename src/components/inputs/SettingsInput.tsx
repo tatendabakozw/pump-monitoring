@@ -1,12 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/ban-types */
-
 type Props = {
   className?: string;
-  label?: string
-  value?: any
-  setValue?: any
-  placeholder?:string
+  label?: string;
+  value?: any;
+  setValue?: any;
+  placeholder?: string;
 };
 
 const SettingsInput = (props: Props) => {
@@ -18,7 +15,7 @@ const SettingsInput = (props: Props) => {
         placeholder={props.placeholder}
         className="p-2 bg-secondary outline-none main-text main-border rounded"
         value={props.value}
-        onChange={e => props.setValue(e.target.value)}
+        onChange={(e) => props.setValue(e.target.value)}
       />
     </div>
   );
