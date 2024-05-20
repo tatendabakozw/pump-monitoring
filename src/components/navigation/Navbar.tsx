@@ -15,7 +15,7 @@ const Navbar = (props: Props) => {
     <div className="w-full main-border-b">
       <div className="container w-full max-w-7xl mx-auto px-4 flex flex-row items-center space-x-4 py-4 ">
         <Link href={"/overview"} className="heading-text font-bold">
-          Inventory | POS
+          Water Item
         </Link>
         <div className="md:flex hidden flex-row items-center space-x-4 text-sm font-semibold">
           {data.nav_options.map((item, index) => (

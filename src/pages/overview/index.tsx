@@ -1,14 +1,12 @@
 import Calendar from "@/components/calender/Calender";
 import Clock from "@/components/clock/Clock";
-import OrdersTable from "@/components/products-table/OrdersTable";
-import ProductsTable from "@/components/products-table/ProductsTable";
 import ProjectItem from "@/components/project-item/ProjectItem";
+import NetworkTable from "@/components/tables/NetworkTable";
 import DashboardLayout from "@/layouts/DashboardLayout";
-import { BanknotesIcon, CurrencyDollarIcon } from "@heroicons/react/16/solid";
+import { BanknotesIcon } from "@heroicons/react/16/solid";
 import {
   ClipboardDocumentIcon,
   MagnifyingGlassIcon,
-  PuzzlePieceIcon,
 } from "@heroicons/react/16/solid";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
@@ -119,10 +117,7 @@ const Overview = (props: Props) => {
               ))}
               <Clock />
             </div>
-            {/* producgts table */}
-            <ProductsTable />
-            {/* producgts table */}
-            <OrdersTable />
+            <NetworkTable />
           </div>
           <div className="col-span-1">
             <Calendar />

@@ -9,13 +9,13 @@ const ProjectItem = (props: projectItemProps) => {
 
   const renderProductNumber = () => {
     if (props._id === "inventory-items") {
-      return <p>{response?.data?.meta?.total}</p>;
+      return <div>{response?.data?.meta?.total}</div>;
     }
-    return <p>{props.createdAt}</p>;
+    return <div>{props.createdAt}</div>;
   };
 
   return (
-    <div className="flex flex-col space-y-1">
+    <div className="flex flex-col space-y-1 col-span-1">
       <div className="bg-primary flex flex-row main-border gap-4 p-4 rounded-lg">
         <div className="flex-1 flex flex-row items-center space-x-4">
           <div className="avatar h-10 w-10 flex-shrink-0 rounded-full bg-zinc-900 dark:bg-zinc-500 grid items-center justify-center content-center main-border">
@@ -24,7 +24,7 @@ const ProjectItem = (props: projectItemProps) => {
           <div className="flex flex-col">
             <p className="heading-text font-semibold">{props.name}</p>
             <div className="flex flex-row items-center text-xs text-slate-500 space-x-1 font-medium">
-              <p className="">{renderProductNumber()}</p>
+              <div className="">{renderProductNumber()}</div>
               <p className="text-md">&bull;</p>
               <p
                 className={

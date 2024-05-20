@@ -10,11 +10,12 @@ type Props = {
 const DashboardLayout = (props: Props) => {
   return (
     <>
-      <Toaster />
       <Head>
         <title>Dashboard</title>
       </Head>
       <div className="flex flex-col min-h-screen">
+        <Toaster />
+
         <div className="nav">
           <Navbar />
         </div>
