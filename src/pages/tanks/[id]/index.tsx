@@ -1,4 +1,7 @@
+import AlertHistory from "@/components/pump-components/AlertHistory";
 import PumpInfo from "@/components/pump-components/PumpInfo";
+import PumpUsageHistory from "@/components/pump-components/PumpUsageHistory";
+import SensorInfo from "@/components/pump-components/SensorInfo";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import { ServerIcon } from "@heroicons/react/16/solid";
 import { ArrowLeftIcon } from "@heroicons/react/16/solid";
@@ -14,7 +17,10 @@ const TankPumpInfo = (props: Props) => {
     <DashboardLayout>
       <div className="flex bg-secondary h-full flex-1 flex-col">
         <div className="max-w-7xl p-4 mx-auto w-full ">
-          <div className="flex flex-row items-center space-x-2 text-zinc-400">
+          <div
+            onClick={() => router.back()}
+            className="flex flex-row cursor-pointer items-center space-x-2 text-zinc-400"
+          >
             <ArrowLeftIcon height={16} width={16} />
             <p>Pumps</p>
           </div>
@@ -27,7 +33,16 @@ const TankPumpInfo = (props: Props) => {
             </div>
           </div>
         </div>
-        <PumpInfo id={id} />
+        <div className="max-w-7xl w-full mx-auto p-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+          <div className="col-span-1 flex flex-col gap-4">
+            <PumpInfo id={id} />
+            <SensorInfo />
+            <PumpUsageHistory />
+          </div>
+          <div className="cols-span-1">
+            <AlertHistory />
+          </div>
+        </div>
       </div>
     </DashboardLayout>
   );

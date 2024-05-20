@@ -51,7 +51,7 @@ const Tanks = (props: Props) => {
     <DashboardLayout>
       <div className="flex flex-col space-y-8">
         <div className="flex flex-row  main-border-b w-full ">
-          <div className="max-w-7xl flex flex-row w-full mx-auto divide-x-[1px] divide-slate-200 dark:divide-zinc-800 px-4">
+          <div className="max-w-7xl flex md:flex-row flex-col w-full mx-auto md:divide-x-[1px]  divide-y-[1px] divide-slate-200 dark:divide-zinc-800 px-4">
             {info_headings.map((item) => (
               <div key={item._id} className="text-start p-4 flex flex-col">
                 <p className="main-text font-medium text-sm">{item.heading}</p>
@@ -63,21 +63,29 @@ const Tanks = (props: Props) => {
           </div>
         </div>
         <div className="flex max-w-7xl w-full mx-auto flex-col">
-          <div className="grid grid-cols-8 bg-secondary w-full heading-text rounded capitalize">
+          <div className="grid md:grid-cols-8 grid-cols-4 bg-secondary w-full heading-text rounded capitalize">
             <div className="col-span-1 p-2 font-medium text-sm">Tank ID</div>
-            <div className="col-span-1 p-2 font-medium text-sm">Location</div>
+            <div className=" col-span-1 p-2 font-medium text-sm">Location</div>
             <div className="col-span-1 p-2 font-medium text-sm">status</div>
-            <div className="col-span-1 p-2 font-medium text-sm">Content</div>
-            <div className="col-span-1 p-2 font-medium text-sm">Percentage</div>
-            <div className="col-span-1 p-2 font-medium text-sm">Order</div>
-            <div className="col-span-1 p-2 font-medium text-sm">Last used</div>
+            <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
+              Content
+            </div>
+            <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
+              Percentage
+            </div>
+            <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
+              Order
+            </div>
+            <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
+              Last used
+            </div>
             <div className="col-span-1 p-2 font-medium text-sm">Volume</div>
           </div>
           {tank_info.map((item) => (
             <div
               key={item.tank_id}
               onClick={() => router.push(`/tanks/${item.tank_id}`)}
-              className="grid grid-cols-8 cursor-pointer bg-primary w-full main-text capitalize"
+              className="grid md:grid-cols-8 grid-cols-4 cursor-pointer bg-primary w-full main-text capitalize"
             >
               <div className="col-span-1 p-2 font-medium text-sm">
                 {item.tank_id}
@@ -88,16 +96,16 @@ const Tanks = (props: Props) => {
               <div className="col-span-1 p-2 font-medium text-sm">
                 {item.status}
               </div>
-              <div className="col-span-1 p-2 font-medium text-sm">
+              <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
                 {item.content}
               </div>
-              <div className="col-span-1 p-2 font-medium text-sm">
+              <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
                 {item.percentage}
               </div>
-              <div className="col-span-1 p-2 font-medium text-sm">
+              <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
                 {item.order}
               </div>
-              <div className="col-span-1 p-2 font-medium text-sm">
+              <div className="md:flex hidden col-span-1 p-2 font-medium text-sm">
                 {item.last_used}
               </div>
               <div className="col-span-1 p-2 font-medium text-sm">

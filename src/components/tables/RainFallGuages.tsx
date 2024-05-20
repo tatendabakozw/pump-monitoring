@@ -2,13 +2,13 @@ import React from "react";
 
 type Props = {};
 
-const NetworkTable = (props: Props) => {
+const RainFallGuages = (props: Props) => {
   return (
     <div className="flex flex-col bg-primary main-border gap-4 p-4 rounded-lg ">
       <div className="flex flex-col space-y-1">
-        <p className=" font-semibold">Levels Table.</p>
+        <p className=" font-semibold">RainFall Guages.</p>
         <p className="text-zinc-400 text-xs font-medium">
-          Description of what network table shows.
+          Description of rainfall guages around the plant.
         </p>
       </div>
       <div className="grid grid-cols-7 text-sm font-semibold heading-text py-2">
@@ -36,4 +36,4 @@ const NetworkTable = (props: Props) => {
   );
 };
 
-export default NetworkTable;
+export default RainFallGuages;

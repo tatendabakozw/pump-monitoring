@@ -2,6 +2,7 @@ import Calendar from "@/components/calender/Calender";
 import Clock from "@/components/clock/Clock";
 import ProjectItem from "@/components/project-item/ProjectItem";
 import NetworkTable from "@/components/tables/NetworkTable";
+import RainFallGuages from "@/components/tables/RainFallGuages";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import { BanknotesIcon } from "@heroicons/react/16/solid";
 import {
@@ -12,9 +13,7 @@ import { PlusCircleIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
-type Props = {};
-
-const Overview = (props: Props) => {
+const Overview = () => {
   const router = useRouter();
   const [selected_option, setSelectedOption] = useState({
     name: "Active",
@@ -118,6 +117,7 @@ const Overview = (props: Props) => {
               <Clock />
             </div>
             <NetworkTable />
+            <RainFallGuages />
           </div>
           <div className="col-span-1">
             <Calendar />
