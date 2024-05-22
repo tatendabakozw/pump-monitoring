@@ -3,6 +3,7 @@ import Clock from "@/components/clock/Clock";
 import ProjectItem from "@/components/project-item/ProjectItem";
 import NetworkTable from "@/components/tables/NetworkTable";
 import RainFallGuages from "@/components/tables/RainFallGuages";
+import TanksPageTable from "@/components/tables/TanksPageTable";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import { BanknotesIcon } from "@heroicons/react/16/solid";
 import {
@@ -28,7 +29,7 @@ const Overview = () => {
 
   const projects = [
     {
-      name: "Inventory items",
+      name: "Pumps",
       _id: "inventory-items",
       link: "https://example.digiforge.app",
       createdAt: "3",
@@ -37,7 +38,7 @@ const Overview = () => {
       Icon: ClipboardDocumentIcon,
     },
     {
-      name: "Total Sales",
+      name: "Item monitoring",
       _id: "total-sales",
       link: "https://daypitch.com",
       createdAt: "3",
@@ -56,17 +57,16 @@ const Overview = () => {
               Dashboard Overview
             </p>
             <p className="text-start main-text text-sm text-zinc-500 max-w-2xl">
-              Choose how you like to manage your inventory. Start by adding
-              items
+              Pump management. Look what you can change
             </p>
           </div>
-          <button
+          {/* <button
             onClick={() => router.push("/inventory/create")}
             className="add-new bg-zinc-900 dark:bg-white text-sm text-white dark:text-zinc-900 flex flex-row items-center space-x-4 rounded-lg font-medium p-2"
           >
             <PlusCircleIcon height={24} width={24} />
             <p>Add New</p>
-          </button>
+          </button> */}
         </div>
         {/* search and filter */}
         <div className="flex flex-row items-center space-x-4 w-full">
@@ -117,7 +117,8 @@ const Overview = () => {
               <Clock />
             </div>
             {/* <NetworkTable /> */}
-            <RainFallGuages />
+            {/* <RainFallGuages /> */}
+            <TanksPageTable />
           </div>
           <div className="col-span-1">
             <Calendar />
