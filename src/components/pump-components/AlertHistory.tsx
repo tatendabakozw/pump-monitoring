@@ -5,7 +5,7 @@ type Props = {};
 const AlertHistory = (props: Props) => {
   const pump_alerts = [
     {
-      priority: "Very low",
+      priority: "High",
       _id: "pomma2",
       time: "09/12/23 14:42",
       status: "Acknowledged",

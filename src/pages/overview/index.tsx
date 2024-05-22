@@ -116,7 +116,7 @@ const Overview = () => {
               ))}
               <Clock />
             </div>
-            <NetworkTable />
+            {/* <NetworkTable /> */}
             <RainFallGuages />
           </div>
           <div className="col-span-1">
