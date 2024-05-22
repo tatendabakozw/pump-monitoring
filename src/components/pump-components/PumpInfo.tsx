@@ -14,7 +14,7 @@ function PumpInfo({ id }: Props) {
       </div>
       <div className="flex justify-between flex-row items-center main-text text-sm">
         <p className="text-start">Volume pumped</p>
-        <p className="text-end font-medium">67792 gal</p>
+        <p className="text-end font-medium">801.606 m3</p>
       </div>
       <p className="text-start">Work order</p>
       <div className="flex justify-between flex-row items-center main-text text-sm">

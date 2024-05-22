@@ -36,7 +36,7 @@ const TankPumpInfo = (props: Props) => {
         <div className="max-w-7xl w-full mx-auto p-4 grid md:grid-cols-2 grid-cols-1 gap-4">
           <div className="col-span-1 flex flex-col gap-4">
             <PumpInfo id={id} />
-            <SensorInfo />
+            {/* <SensorInfo /> */}
             <PumpUsageHistory />
           </div>
           <div className="cols-span-1">
