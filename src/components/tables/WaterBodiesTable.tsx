@@ -17,17 +17,15 @@ const WaterBodiesTable = (props: Props) => {
           Percentage
         </div>
 
-        <div className="col-span-1 p-2 font-medium text-sm">Volume</div>
+        <div className="col-span-1 p-2 font-medium text-sm">Volume(m3)</div>
       </div>
-      {data.tank_info.map((item) => (
+      {data.bodies_info.map((item) => (
         <div
           key={item.tank_id}
           onClick={() => router.push(`/tanks/${item.tank_id}`)}
           className="grid md:grid-cols-5 grid-cols-4 cursor-pointer bg-primary w-full main-text capitalize"
         >
-          <div className="col-span-1 p-2 font-medium text-sm">
-            {item.tank_id}
-          </div>
+          <div className="col-span-1 p-2 font-medium text-sm">{item.name}</div>
           <div className="col-span-1 p-2 font-medium text-sm">
             {item.lcoation}
           </div>

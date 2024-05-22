@@ -38,7 +38,7 @@ const Overview = () => {
       Icon: ClipboardDocumentIcon,
     },
     {
-      name: "Item monitoring",
+      name: "Monitoring",
       _id: "total-sales",
       link: "https://daypitch.com",
       createdAt: "3",
@@ -117,8 +117,8 @@ const Overview = () => {
               <Clock />
             </div>
             {/* <NetworkTable /> */}
-            {/* <RainFallGuages /> */}
-            <TanksPageTable />
+            <RainFallGuages />
+            {/* <TanksPageTable /> */}
           </div>
           <div className="col-span-1">
             <Calendar />
