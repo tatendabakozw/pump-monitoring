@@ -24,7 +24,7 @@ const PumpGraph = (props: Props) => {
       },
       title: {
         display: true,
-        text: "Power usage graph",
+        text: "Energy saved",
       },
     },
   };
