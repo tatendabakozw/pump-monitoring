@@ -13,6 +13,12 @@ const PumpGraph = (props: Props) => {
         borderColor: "rgba(75, 192, 192, 1)",
         backgroundColor: "rgba(75, 192, 192, 0.2)",
       },
+      {
+        label: "Consumption",
+        data: [45, 49, 60, 71, 46, 35, 30],
+        borderColor: "rgba(153, 102, 255, 1)",
+        backgroundColor: "rgba(153, 102, 255, 0.2)",
+      },
     ],
   };
 
