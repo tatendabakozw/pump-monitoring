@@ -98,7 +98,7 @@ const RainFallGuages = (props: Props) => {
   return (
     <div className="flex flex-col bg-primary main-border gap-4 p-4 rounded-lg ">
       <div className="flex flex-col space-y-1">
-        <p className=" font-semibold">RainFall Guages.</p>
+        <p className=" font-semibold">Perfomance indicators.</p>
         <p className="text-zinc-400 text-xs font-medium">
           Description of rainfall guages around the plant.
         </p>
