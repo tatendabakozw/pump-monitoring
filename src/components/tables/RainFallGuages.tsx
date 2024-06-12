@@ -100,7 +100,7 @@ const RainFallGuages = (props: Props) => {
       <div className="flex flex-col space-y-1">
         <p className=" font-semibold">Perfomance indicators.</p>
         <p className="text-zinc-400 text-xs font-medium">
-          Description of rainfall guages around the plant.
+          Pump key perfomance indicators.
         </p>
       </div>
       <div className="grid grid-cols-5 text-sm font-semibold heading-text py-2">
