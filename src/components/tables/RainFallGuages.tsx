@@ -93,6 +93,14 @@ const RainFallGuages = (props: Props) => {
       pump_rate: "19.023",
       _id: "11ioi11",
     },
+    {
+      location: "13W Gizzle",
+      pump_type: "Sakugawara",
+      pump_head: "120",
+      pump_size: "29.84",
+      pump_rate: "19.023",
+      _id: "11ioi11",
+    },
   ];
 
   return (
